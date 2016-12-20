@@ -62,6 +62,7 @@ button {
     padding 20px;
     font-size: 30px;
     background-color: lawngreen;
+    width: 30%;
 }
 
 button:hover {

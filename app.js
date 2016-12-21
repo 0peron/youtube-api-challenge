@@ -1,6 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
+    $('.js-search-results').hide();
     var addHTML = "";
     $('.js-search-form').submit(function (event) {
         event.preventDefault();
@@ -23,6 +24,7 @@ $(document).ready(function () {
                 } else {
                     displaySearch(apiData.items);
                 }
+                $('.js-search-results').show();
             });
     }
 
@@ -36,7 +38,6 @@ $(document).ready(function () {
             addHTML += "</a>";
             addHTML += "</li>";
         });
-        console.log("work")
         $('.js-search-results').html(addHTML);
     }
 });
